@@ -13,3 +13,6 @@ After the server is up and running locally, you should launch the angular projec
 
 ### Demo
 You can find a demo through [here](https://youtu.be/z-cd6sK0vX0)
+
+### Credits
+Heba Elwazzan - OMSCS student
