@@ -31,6 +31,7 @@ class Game:
         elif self.correct_guess == 'ai':
             g = Gemini()
             self.paragraph = g.get_gemini_abstract(self.topic)
+        return self.paragraph
 
     def get_result(self, guess):
         if guess == self.correct_guess:

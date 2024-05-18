@@ -12,7 +12,7 @@ class Wiki:
         response = requests.get(url)
         soup = BeautifulSoup(response.content, 'html.parser')
         p = soup.find("p")
-        abstract = re.sub("\[(\d+)\]", "", p.text)
+        abstract = re.sub("\[[^\]]*\]", "", p.text)
         return abstract
 
 

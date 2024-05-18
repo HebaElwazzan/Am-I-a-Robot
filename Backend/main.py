@@ -43,10 +43,11 @@ class API_Connector:
 
 
     def get_result(self):
-        response = request['answer']
+        response = request.json['answer']
         result = self.game.get_result(guess=response)
         with open(self.stats_path, 'r') as file:
-            stats = json.loads(file)
+            file_contents = file.read()
+            stats = json.loads(file_contents)
 
         if result:
             stats['correct_guesses'] += 1
@@ -60,7 +61,8 @@ class API_Connector:
     
     def get_stats(self):
         with open(self.stats_path, 'r') as file:
-            stats = json.loads(file)
+            file_contents = file.read()
+            stats = json.loads(file_contents)
         return stats
     
 

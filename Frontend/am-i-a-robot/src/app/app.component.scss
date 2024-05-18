@@ -1,0 +1,110 @@
+  :host {
+
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol";
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  }
+
+  .robot {
+      height: 40vh;
+  }
+
+  h1 {
+      font-size: 3.125rem;
+      color: var(--gray-900);
+      font-weight: 500;
+      line-height: 100%;
+      letter-spacing: -0.125rem;
+      margin: 0;
+      font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol";
+  }
+
+  p {
+      margin: 0;
+      color: var(--gray-700);
+  }
+
+  main {
+      width: 100%;
+      min-height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      box-sizing: inherit;
+      position: relative;
+
+  }
+
+  .centered {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .content {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      max-width: 700px;
+      margin-bottom: 3rem;
+      position: fixed;
+      top: 40px;
+  }
+
+  .content h1 {
+      margin-top: 1.75rem;
+  }
+
+  .buttons {
+      display: flex;
+      gap: 30px;
+
+  }
+
+  h3 {
+    margin: 3px;
+  }
+
+
+  .red:hover {
+      color: rgb(162, 41, 41);
+      border-color: rgb(162, 41, 41);
+  }
+
+  .green:hover {
+      color: green;
+      border-color: green
+  }
+
+  ::ng-deep mat-spinner {
+      height: 50px !important;
+      margin: 5px;
+  }
+
+  .content p {
+      margin-top: 1.5rem;
+  }
+
+  button {
+      margin-top: 15px;
+      border: 2px solid black;
+      border-radius: 20px;
+      font-size: large;
+  }
+
+
+
+  @media screen and (max-width: 650px) {
+      .content {
+          flex-direction: column;
+          width: max-content;
+      }
+
+
+  }
