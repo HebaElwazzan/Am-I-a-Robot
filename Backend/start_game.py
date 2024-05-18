@@ -3,6 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 import random
 from generate_wiki import Wiki
+from generate_gemini import Gemini
 
 class Game:
     def __init__(self):
@@ -27,6 +28,14 @@ class Game:
         if self.correct_guess == 'wiki':
             w = Wiki()
             self.paragraph = w.get_wiki_abstract(self.url)
+        elif self.correct_guess == 'ai':
+            g = Gemini()
+            self.paragraph = g.get_gemini_abstract(self.topic)
+
+    def get_result(self, guess):
+        if guess == self.correct_guess:
+            return True
+        return False
         
 
 
